@@ -201,6 +201,20 @@ func (s *Statement) Dot(name string) *Statement {
 	return s
 }
 
+// DotWrap renders a period followed by an newline and an identifier. Use for fields and selectors.
+func (s *Statement) DotWrap(name string) *Statement {
+	d := token{
+		typ:     delimiterToken,
+		content: ".\n",
+	}
+	t := token{
+		typ:     identifierToken,
+		content: name,
+	}
+	*s = append(*s, d, t)
+	return s
+}
+
 // Id renders an identifier.
 func Id(name string) *Statement {
 	return newStatement().Id(name)
