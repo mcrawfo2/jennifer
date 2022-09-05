@@ -1,6 +1,6 @@
 module github.com/dave/jennifer
 
-go 1.15
+go 1.18
 
 require (
 	github.com/dave/astrid v0.0.0-20170323122508-8c2895878b14 // indirect
