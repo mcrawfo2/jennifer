@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	. "github.com/dave/jennifer/jen"
+	. "github.com/mcrawfo2/jennifer/jen"
 )
 
 func TestStatement_Render(t *testing.T) {
